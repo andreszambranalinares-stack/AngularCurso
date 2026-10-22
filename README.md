@@ -1,59 +1,37 @@
-# ProyectoDirectiva
+# Curso de Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.0.
+Ejercicios organizados por bloque, carril y ejercicio. Cada ejercicio contiene su propio proyecto Angular y sus dependencias.
 
-## Development server
-
-To start a local development server, run:
-
-```bash
-ng serve
+```text
+bloque-2/
+└── carril-b/
+    └── ejercicio-2.2/
+        ├── angular.json
+        ├── package.json
+        ├── package-lock.json
+        ├── public/
+        ├── src/
+        └── tsconfig*.json
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+| Bloque | Carril | Ejercicio | Proyecto |
+| --- | --- | --- | --- |
+| 2 | B | [2.2](bloque-2/carril-b/ejercicio-2.2/README.md) | Directiva de resaltado configurable |
 
-## Code scaffolding
+## Ejecutar el ejercicio 2.2
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Desde la raíz del repositorio:
 
 ```bash
-ng generate --help
+cd bloque-2/carril-b/ejercicio-2.2
+npm ci
+npm start
 ```
 
-## Building
+Abre `http://localhost:4200/`. También puedes abrir la carpeta del ejercicio directamente en VS Code para utilizar sus tareas y opciones de depuración.
 
-To build the project run:
+## Añadir ejercicios
 
-```bash
-ng build
-```
+Sigue la estructura `bloque-N/carril-x/ejercicio-N.M/` y añade el ejercicio a la tabla. Guarda en su carpeta el proyecto completo, incluidos `package.json`, `package-lock.json` y la configuración de Angular y TypeScript.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Los ajustes de formato y las reglas de Git se comparten desde la raíz. Las dependencias, cachés y archivos generados se ignoran en todos los ejercicios.
