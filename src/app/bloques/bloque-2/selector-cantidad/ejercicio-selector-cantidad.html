@@ -1,0 +1,9 @@
+<h2>Selector de cantidad</h2>
+<h3>Padre</h3>
+
+<selector-cantidad
+  [cantidadInicial]="-3"
+  [maximo]="20"
+  (cantidadCambiada)="mostrarCantidad($event)"
+></selector-cantidad>
+<p data-testid="cantidad-padre">{{ cantidad }}</p>

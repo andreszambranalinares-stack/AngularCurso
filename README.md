@@ -1,56 +1,79 @@
 # Curso de Angular
 
-Ejercicios organizados por bloque. Cada proyecto incluye su código, configuración y archivos de dependencias para poder continuar en otro equipo.
+Una sola aplicación Angular para todos los bloques del curso. Cada ejercicio tiene su carpeta y su ruta, y todos comparten las dependencias y la configuración de la raíz.
 
-```text
-bloque-2/
-├── selector-cantidad/          # Proyecto Bloque2 actual
-│   ├── angular.json
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── public/
-│   ├── src/
-│   └── tsconfig*.json
-└── carril-b/
-    └── ejercicio-2.2/          # Directiva de resaltado
-```
+## Empezar en casa
 
-| Bloque | Proyecto | Descripción |
-| --- | --- | --- |
-| 2 | [Selector de cantidad](bloque-2/selector-cantidad/README.md) | Proyecto actual en curso: comunicación entre componentes con entradas y eventos |
-| 2 · Carril B | [Ejercicio 2.2](bloque-2/carril-b/ejercicio-2.2/README.md) | Directiva de resaltado configurable |
-
-## Continuar en casa con el proyecto actual
-
-El proyecto actual se ha compilado con Node.js 24.21.0 y npm 11.19.0. Usa Node.js 24 (24.15 o superior dentro de la rama 24) y npm 11.
-
-La primera vez:
+Usa Node.js 24 (24.15 o superior dentro de la rama 24) y npm 11.
 
 ```bash
 git clone https://github.com/andreszambranalinares-stack/AngularCurso.git
-cd AngularCurso/bloque-2/selector-cantidad
+cd AngularCurso
 npm ci
 npm start
 ```
 
-Abre `http://localhost:4200/`. No hace falta instalar Angular CLI globalmente.
+Abre `http://localhost:4200/` y elige el ejercicio en el menú. Angular CLI está incluido en el proyecto.
 
-Si ya tienes el repositorio clonado, ejecuta `git pull` desde su carpeta y después entra en `bloque-2/selector-cantidad`, ejecuta `npm ci` y `npm start`.
+La instalación se hace una vez en la raíz de cada equipo. En las siguientes sesiones basta con `npm start`. Después de `git pull`, repite `npm ci` si ha cambiado `package-lock.json`.
 
-## Ejecutar el ejercicio anterior
+## Estructura
 
-Desde la raíz del repositorio:
-
-```bash
-cd bloque-2/carril-b/ejercicio-2.2
-npm ci
-npm start
+```text
+AngularCurso/
+├── package.json                 # Dependencias comunes
+├── package-lock.json            # Versiones comunes
+├── angular.json                 # Una sola aplicación
+├── tsconfig*.json
+├── public/
+└── src/
+    └── app/
+        ├── app.*                # Menú, configuración y rutas generales
+        └── bloques/
+            └── bloque-2/
+                ├── bloque-2.routes.ts
+                ├── selector-cantidad/
+                │   ├── ejercicio-selector-cantidad.ts
+                │   ├── ejercicio-selector-cantidad.html
+                │   └── selector-cantidad/
+                │       ├── selector-cantidad.ts
+                │       ├── selector-cantidad.html
+                │       ├── selector-cantidad.css
+                │       └── selector-cantidad.spec.ts
+                └── carril-b/
+                    └── ejercicio-2.2/
+                        ├── ejercicio-2-2.ts
+                        ├── ejercicio-2-2.html
+                        ├── app-resaltado.ts
+                        └── app-resaltado.spec.ts
 ```
 
-## Qué se guarda
+## Ejercicios
 
-Se incluyen el código fuente, los recursos, las pruebas existentes, `package.json`, `package-lock.json` y la configuración de Angular y TypeScript. El archivo de bloqueo permite reinstalar las mismas versiones con `npm ci`.
+| Bloque | Ejercicio | Ruta en el navegador |
+| --- | --- | --- |
+| 2 | [Selector de cantidad](src/app/bloques/bloque-2/selector-cantidad/README.md) | `/bloque-2/selector-cantidad` |
+| 2 · Carril B | [Ejercicio 2.2: resaltado](src/app/bloques/bloque-2/carril-b/ejercicio-2.2/README.md) | `/bloque-2/carril-b/ejercicio-2.2` |
 
-Las dependencias, cachés, compilaciones y cobertura se regeneran en cada equipo y están excluidas mediante `.gitignore`. El proyecto actual se sube sin ajustes del editor; los ajustes de formato se comparten desde la raíz.
+El selector conserva sus entradas, evento de salida y lógica actual para continuar el ejercicio. La directiva del ejercicio 2.2 conserva su implementación y ejemplos.
 
-Para nuevos ejercicios, conserva una carpeta independiente dentro de `bloque-N/`, siguiendo el carril y número cuando se conozcan, y añádela al índice.
+## Añadir ejercicios y bloques
+
+1. Crea la carpeta del ejercicio dentro de `src/app/bloques/bloque-N/`; añade el carril cuando corresponda.
+2. Guarda allí sus componentes, directivas, plantillas, estilos y pruebas.
+3. Añade la ruta a `bloque-N.routes.ts` y un enlace al menú en `src/app/app.html`.
+4. Para un bloque nuevo, conecta su archivo de rutas desde `src/app/app.routes.ts`.
+
+Los ejercicios comparten el `package.json` y el `angular.json` de la raíz. No hay que crear un proyecto Angular ni instalar dependencias por cada ejercicio.
+
+## Comandos comunes
+
+Ejecuta todos los comandos desde la raíz:
+
+| Comando | Uso |
+| --- | --- |
+| `npm start` | Abrir todos los ejercicios con un servidor de desarrollo |
+| `npm run build` | Compilar la aplicación completa |
+| `npm test -- --watch=false` | Ejecutar las pruebas una vez |
+
+Git excluye `node_modules`, cachés de Angular, compilaciones, cobertura y ajustes del editor. Se guarda `package-lock.json` para poder reinstalar las mismas versiones.
