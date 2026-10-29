@@ -1,24 +1,43 @@
 # Curso de Angular
 
-Ejercicios organizados por bloque, carril y ejercicio. Cada ejercicio contiene su propio proyecto Angular y sus dependencias.
+Ejercicios organizados por bloque. Cada proyecto incluye su código, configuración y archivos de dependencias para poder continuar en otro equipo.
 
 ```text
 bloque-2/
+├── selector-cantidad/          # Proyecto Bloque2 actual
+│   ├── angular.json
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── public/
+│   ├── src/
+│   └── tsconfig*.json
 └── carril-b/
-    └── ejercicio-2.2/
-        ├── angular.json
-        ├── package.json
-        ├── package-lock.json
-        ├── public/
-        ├── src/
-        └── tsconfig*.json
+    └── ejercicio-2.2/          # Directiva de resaltado
 ```
 
-| Bloque | Carril | Ejercicio | Proyecto |
-| --- | --- | --- | --- |
-| 2 | B | [2.2](bloque-2/carril-b/ejercicio-2.2/README.md) | Directiva de resaltado configurable |
+| Bloque | Proyecto | Descripción |
+| --- | --- | --- |
+| 2 | [Selector de cantidad](bloque-2/selector-cantidad/README.md) | Proyecto actual en curso: comunicación entre componentes con entradas y eventos |
+| 2 · Carril B | [Ejercicio 2.2](bloque-2/carril-b/ejercicio-2.2/README.md) | Directiva de resaltado configurable |
 
-## Ejecutar el ejercicio 2.2
+## Continuar en casa con el proyecto actual
+
+El proyecto actual se ha compilado con Node.js 24.21.0 y npm 11.19.0. Usa Node.js 24 (24.15 o superior dentro de la rama 24) y npm 11.
+
+La primera vez:
+
+```bash
+git clone https://github.com/andreszambranalinares-stack/AngularCurso.git
+cd AngularCurso/bloque-2/selector-cantidad
+npm ci
+npm start
+```
+
+Abre `http://localhost:4200/`. No hace falta instalar Angular CLI globalmente.
+
+Si ya tienes el repositorio clonado, ejecuta `git pull` desde su carpeta y después entra en `bloque-2/selector-cantidad`, ejecuta `npm ci` y `npm start`.
+
+## Ejecutar el ejercicio anterior
 
 Desde la raíz del repositorio:
 
@@ -28,10 +47,10 @@ npm ci
 npm start
 ```
 
-Abre `http://localhost:4200/`. También puedes abrir la carpeta del ejercicio directamente en VS Code para utilizar sus tareas y opciones de depuración.
+## Qué se guarda
 
-## Añadir ejercicios
+Se incluyen el código fuente, los recursos, las pruebas existentes, `package.json`, `package-lock.json` y la configuración de Angular y TypeScript. El archivo de bloqueo permite reinstalar las mismas versiones con `npm ci`.
 
-Sigue la estructura `bloque-N/carril-x/ejercicio-N.M/` y añade el ejercicio a la tabla. Guarda en su carpeta el proyecto completo, incluidos `package.json`, `package-lock.json` y la configuración de Angular y TypeScript.
+Las dependencias, cachés, compilaciones y cobertura se regeneran en cada equipo y están excluidas mediante `.gitignore`. El proyecto actual se sube sin ajustes del editor; los ajustes de formato se comparten desde la raíz.
 
-Los ajustes de formato y las reglas de Git se comparten desde la raíz. Las dependencias, cachés y archivos generados se ignoran en todos los ejercicios.
+Para nuevos ejercicios, conserva una carpeta independiente dentro de `bloque-N/`, siguiendo el carril y número cuando se conozcan, y añádela al índice.
