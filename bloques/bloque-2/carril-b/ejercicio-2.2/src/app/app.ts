@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { AppResaltado } from './app-resaltado';
 
 @Component({
-  selector: 'app-ejercicio-resaltado',
+  selector: 'app-root',
   imports: [AppResaltado],
-  templateUrl: './ejercicio-2-2.html',
+  templateUrl: './app.html',
+  styleUrl: './app.css',
 })
-export class Ejercicio22 {}
+export class App {}

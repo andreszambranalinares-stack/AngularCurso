@@ -3,10 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "start": "ng serve b2-selector-cantidad",
+    "start:b2-selector": "ng serve b2-selector-cantidad",
+    "start:b2-2-2": "ng serve b2-carril-b-2-2",
+    "build": "npm run build:b2-selector && npm run build:b2-2-2",
+    "build:b2-selector": "ng build b2-selector-cantidad",
+    "build:b2-2-2": "ng build b2-carril-b-2-2",
+    "watch": "ng build b2-selector-cantidad --watch --configuration development",
+    "test": "ng test",
+    "test:b2-selector": "ng test b2-selector-cantidad",
+    "test:b2-2-2": "ng test b2-carril-b-2-2"
   },
   "private": true,
   "packageManager": "npm@11.19.0",

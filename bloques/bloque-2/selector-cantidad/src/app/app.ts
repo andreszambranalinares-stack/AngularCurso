@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { SelectorCantidad } from './selector-cantidad/selector-cantidad';
 
 @Component({
-  selector: 'app-ejercicio-selector-cantidad',
+  selector: 'app-root',
   imports: [SelectorCantidad],
-  templateUrl: './ejercicio-selector-cantidad.html',
+  templateUrl: './app.html',
+  styleUrl: './app.css',
 })
-export class EjercicioSelectorCantidad {
+export class App {
   protected cantidad = 0;
 
   mostrarCantidad(numero: number) {
