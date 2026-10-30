@@ -1,10 +1,10 @@
 import { TestBed } from '@angular/core/testing';
-import { App } from './app';
+import { Ejercicio25 } from './ejercicio-2-5';
 
 describe('Selector de cantidad · Componente padre', () => {
   it('muestra la cantidad emitida por el componente hijo', async () => {
-    await TestBed.configureTestingModule({ imports: [App] }).compileComponents();
-    const fixture = TestBed.createComponent(App);
+    await TestBed.configureTestingModule({ imports: [Ejercicio25] }).compileComponents();
+    const fixture = TestBed.createComponent(Ejercicio25);
     await fixture.whenStable();
     const pagina = fixture.nativeElement as HTMLElement;
 

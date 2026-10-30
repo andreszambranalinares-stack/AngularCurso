@@ -5,30 +5,29 @@
     "packageManager": "npm",
     "analytics": false
   },
-  "newProjectRoot": "bloques",
   "projects": {
-    "b2-selector-cantidad": {
+    "AngularCurso": {
       "projectType": "application",
       "schematics": {},
-      "root": "bloques/bloque-2/selector-cantidad",
-      "sourceRoot": "bloques/bloque-2/selector-cantidad/src",
+      "root": "",
+      "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist/b2-selector-cantidad",
-            "index": "bloques/bloque-2/selector-cantidad/src/index.html",
-            "browser": "bloques/bloque-2/selector-cantidad/src/main.ts",
-            "tsConfig": "bloques/bloque-2/selector-cantidad/tsconfig.app.json",
+            "outputPath": "dist/angular-curso",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "tsConfig": "tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "bloques/bloque-2/selector-cantidad/public"
+                "input": "public"
               }
             ],
             "styles": [
-              "bloques/bloque-2/selector-cantidad/src/styles.css"
+              "src/styles.css"
             ]
           },
           "configurations": {
@@ -57,97 +56,18 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
-          "options": {
-            "port": 4200
-          },
           "configurations": {
             "production": {
-              "buildTarget": "b2-selector-cantidad:build:production"
+              "buildTarget": "AngularCurso:build:production"
             },
             "development": {
-              "buildTarget": "b2-selector-cantidad:build:development"
+              "buildTarget": "AngularCurso:build:development"
             }
           },
           "defaultConfiguration": "development"
         },
         "test": {
-          "builder": "@angular/build:unit-test",
-          "options": {
-            "tsConfig": "bloques/bloque-2/selector-cantidad/tsconfig.spec.json",
-            "buildTarget": "b2-selector-cantidad:build:development"
-          }
-        }
-      }
-    },
-    "b2-carril-b-2-2": {
-      "projectType": "application",
-      "schematics": {},
-      "root": "bloques/bloque-2/carril-b/ejercicio-2.2",
-      "sourceRoot": "bloques/bloque-2/carril-b/ejercicio-2.2/src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular/build:application",
-          "options": {
-            "outputPath": "dist/b2-carril-b-2-2",
-            "index": "bloques/bloque-2/carril-b/ejercicio-2.2/src/index.html",
-            "browser": "bloques/bloque-2/carril-b/ejercicio-2.2/src/main.ts",
-            "tsConfig": "bloques/bloque-2/carril-b/ejercicio-2.2/tsconfig.app.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "bloques/bloque-2/carril-b/ejercicio-2.2/public"
-              }
-            ],
-            "styles": [
-              "bloques/bloque-2/carril-b/ejercicio-2.2/src/styles.css"
-            ]
-          },
-          "configurations": {
-            "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
-                }
-              ],
-              "outputHashing": "all"
-            },
-            "development": {
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve": {
-          "builder": "@angular/build:dev-server",
-          "options": {
-            "port": 4201
-          },
-          "configurations": {
-            "production": {
-              "buildTarget": "b2-carril-b-2-2:build:production"
-            },
-            "development": {
-              "buildTarget": "b2-carril-b-2-2:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "test": {
-          "builder": "@angular/build:unit-test",
-          "options": {
-            "tsConfig": "bloques/bloque-2/carril-b/ejercicio-2.2/tsconfig.spec.json",
-            "buildTarget": "b2-carril-b-2-2:build:development"
-          }
+          "builder": "@angular/build:unit-test"
         }
       }
     }

@@ -22,16 +22,10 @@
   "files": [],
   "references": [
     {
-      "path": "./bloques/bloque-2/selector-cantidad/tsconfig.app.json"
+      "path": "./tsconfig.app.json"
     },
     {
-      "path": "./bloques/bloque-2/selector-cantidad/tsconfig.spec.json"
-    },
-    {
-      "path": "./bloques/bloque-2/carril-b/ejercicio-2.2/tsconfig.app.json"
-    },
-    {
-      "path": "./bloques/bloque-2/carril-b/ejercicio-2.2/tsconfig.spec.json"
+      "path": "./tsconfig.spec.json"
     }
   ]
 }
