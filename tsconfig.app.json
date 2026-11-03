@@ -3,6 +3,11 @@
   "compilerOptions": {
     "types": []
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["src/**/*.spec.ts"]
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts",
+    "src/app/bloques/bloque-2/ejercicio-2.7/**/*"
+  ]
 }
