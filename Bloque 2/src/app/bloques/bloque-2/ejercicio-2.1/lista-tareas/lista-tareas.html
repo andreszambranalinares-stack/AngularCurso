@@ -1,0 +1,25 @@
+@if (tareas.length > 3) {
+  <p>Tienes muchas tareas</p>
+} @else {
+  <p>Lista manejable</p>
+}
+<ul>
+  @for (tarea of tareas; track tarea.id) {
+    <li>
+      {{ tarea.titulo }} —
+      @switch (tarea.prioridad) {
+        @case ('alta') {
+          🔴 Alta
+        }
+        @case ('media') {
+          🟡 Media
+        }
+        @case ('baja') {
+          🟢 Baja
+        }
+      }
+    </li>
+  } @empty {
+    <li>No hay tareas pendientes</li>
+  }
+</ul>

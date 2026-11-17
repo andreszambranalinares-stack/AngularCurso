@@ -1,0 +1,8 @@
+<div [class.agotado]="!disponible">
+  <h3>{{ nombre }}</h3>
+  <p>{{ precio }} €</p>
+
+  <img [src]="imageUrl" alt="nombre" width="120" />
+  <br /><br />
+  <button [disabled]="!disponible">botonsito</button>
+</div>

@@ -6,6 +6,8 @@ Repositorio de ejercicios organizado por bloques.
 
 ```text
 AngularCurso/
+├── Bloque 1/
+│   └── src/app/bloques/bloque-1/ (ejercicios 1.3–1.6)
 ├── Bloque 2/
 │   ├── angular.json
 │   ├── package.json
@@ -27,11 +29,12 @@ AngularCurso/
     └── ejercicio4.5/
 ```
 
+- [Bloque 1](Bloque%201/README.md): proyecto de los ejercicios del bloque 1.
 - [Bloque 2](Bloque%202/README.md): proyecto de los ejercicios del bloque 2. El ejercicio 2.7 incluye su propio proyecto Angular.
 - [Bloque 3 · ejercicio 3.4](Bloque%203/ejercicio3.4/README.md): proyecto de panel de acciones y notificaciones.
 - [Bloque 4 · ejercicio 4.5](Bloque%204/ejercicio4.5/README.md): proyecto Agencia Orion con el servicio de viajes.
 
-Los ejercicios 2.1, 2.3, 2.4 y 2.6 tienen carpetas reservadas. Los ejercicios realizados conservan sus archivos y su estado de desarrollo.
+Los ejercicios 2.3, 2.4 y 2.6 tienen carpetas reservadas. Los ejercicios realizados conservan sus archivos y su estado de desarrollo.
 
 ## Ejecutar el bloque 2
 

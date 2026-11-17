@@ -5,8 +5,8 @@ Ejercicios organizados por bloque y número.
 ```text
 src/app/bloques/
 └── bloque-2/
-    ├── ejercicio-2.1/
-    ├── ejercicio-2.2/    # Resaltado
+    ├── ejercicio-2.1/    # Lista de tareas (@if, @for, @switch)
+    ├── ejercicio-2.2/    # Resaltado y tarjeta de estado (ngClass)
     ├── ejercicio-2.3/
     ├── ejercicio-2.4/
     ├── ejercicio-2.5/    # Selector de cantidad (número por confirmar)
