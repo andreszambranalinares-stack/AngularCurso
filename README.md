@@ -21,12 +21,15 @@ AngularCurso/
 │   │       ├── ejercicio-2.6/
 │   │       └── ejercicio-2.7/
 │   └── tsconfig*.json
-└── Bloque 3/
-    └── ejercicio3.4/
+├── Bloque 3/
+│   └── ejercicio3.4/
+└── Bloque 4/
+    └── ejercicio4.5/
 ```
 
 - [Bloque 2](Bloque%202/README.md): proyecto de los ejercicios del bloque 2. El ejercicio 2.7 incluye su propio proyecto Angular.
 - [Bloque 3 · ejercicio 3.4](Bloque%203/ejercicio3.4/README.md): proyecto de panel de acciones y notificaciones.
+- [Bloque 4 · ejercicio 4.5](Bloque%204/ejercicio4.5/README.md): proyecto Agencia Orion con el servicio de viajes.
 
 Los ejercicios 2.1, 2.3, 2.4 y 2.6 tienen carpetas reservadas. Los ejercicios realizados conservan sus archivos y su estado de desarrollo.
 
@@ -56,6 +59,16 @@ Desde la raíz del repositorio:
 
 ```bash
 cd "Bloque 3/ejercicio3.4"
+npm ci
+npm start
+```
+
+## Ejecutar el ejercicio 4.5
+
+Desde la raíz del repositorio:
+
+```bash
+cd "Bloque 4/ejercicio4.5"
 npm ci
 npm start
 ```
