@@ -1,0 +1,7 @@
+<ul>
+  @for (planeta of planetas; track planeta.id) {
+    <li>
+      <a [routerLink]="['/planeta', planeta.id]">{{ planeta.emoji }} {{ planeta.nombre }} </a>
+    </li>
+  }
+</ul>

@@ -1,1 +1,11 @@
-<p>embarque works!</p>
+@if (billete) {
+  <br />
+  <a>{{ billete.nombre }}</a>
+  <br />
+  <a>{{ billete.emoji }}</a>
+  <br />
+  <button (click)="despegar()">Despegar</button>
+  <br />
+  <br />
+  <button (click)="anular()">Anular</button>
+}

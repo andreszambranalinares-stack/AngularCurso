@@ -1,36 +1,41 @@
 import { Service } from '@angular/core';
 
-
-    export interface Planeta{
-     id:number, nombre: string , emoji: string, distancia: number, precio: number    
-    }
+export interface Planeta {
+  id: number;
+  nombre: string;
+  emoji: string;
+  distancia: number;
+  precio: number;
+}
 @Service()
 export class ViajesService {
+  planetas: Planeta[] = [
+    { id: 1, nombre: 'Jupiter', emoji: '🪐', distancia: 1000, precio: 10000 },
+    { id: 2, nombre: 'Marte', emoji: '🌎', distancia: 1000, precio: 10000 },
+    { id: 3, nombre: 'Titan', emoji: '🪐', distancia: 1000, precio: 10000 },
+    { id: 4, nombre: 'Kepler-22b', emoji: '🪐', distancia: 1000, precio: 10000 },
+  ];
 
+  buscarPorId(id: number) {
+    return this.planetas.find((x) => x.id === id);
+  }
 
-    planetas: Planeta[] = [
-        {id: 1, nombre: "Jupiter", emoji: "🪐", distancia: 1000, precio:10000},
-        {id: 2, nombre: "Marte", emoji: "🌎", distancia: 1000, precio:10000},
-        {id: 3, nombre: "Titan", emoji: "🪐", distancia: 1000, precio:10000},
-        {id: 4, nombre: "Kepler-22b", emoji: "🪐", distancia: 1000, precio:10000}  
-    ]
+  comprarBillete(planeta: Planeta) {
+    this.billete = planeta;
 
-    buscarPorId(id: number){
-        return this.planetas.find(x => x.id)
+    console.log('Has comprado el billete para ' + planeta.nombre);
+  }
+  verBillete() {
+    return this.billete;
+  }
+  anularBillete() {
+    this.billete = undefined;
+  }
+  tieneBillete(): boolean {
+    if (!this.billete) {
+      return false;
     }
-    
-    reservar(planeta: Planeta){
-
-    }
-    cancelar(){
-
-    }
-
-    tieneBillete(): boolean{
-        return true
-    }
-    billete(){
-        
-    }
-
+    return true;
+  }
+  private billete: Planeta | undefined = undefined;
 }
